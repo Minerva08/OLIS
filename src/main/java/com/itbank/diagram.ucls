@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.itbank.controller.EventController" project="project2" 
+    file="/project2/src/main/java/com/itbank/controller/EventController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="160" width="316" x="1092" y="62"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" language="java" name="com.itbank.model.ItemDAO" project="project2" 
+    file="/project2/src/main/java/com/itbank/model/ItemDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="124" width="231" x="1895" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" language="java" name="com.itbank.service.TradeService" project="project2" 
+    file="/project2/src/main/java/com/itbank/service/TradeService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="394" width="319" x="4889" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" language="java" name="com.itbank.model.QnADAO" project="project2" 
+    file="/project2/src/main/java/com/itbank/model/QnADAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="304" width="229" x="1360" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" language="java" name="com.itbank.service.QnAService" project="project2" 
+    file="/project2/src/main/java/com/itbank/service/QnAService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="322" width="211" x="1361" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="6" language="java" name="com.itbank.model.WishListDAO" project="project2" 
+    file="/project2/src/main/java/com/itbank/model/WishListDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="368" x="2878" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="7" language="java" name="com.itbank.controller.MemberController" project="project2" 
+    file="/project2/src/main/java/com/itbank/controller/MemberController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="286" width="299" x="2176" y="62"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.itbank.intercepter.LoginIntercepter" project="project2" 
+    file="/project2/src/main/java/com/itbank/intercepter/LoginIntercepter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="493" x="139" y="62"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="9" language="java" name="com.itbank.model.OrderListDAO" project="project2" 
+    file="/project2/src/main/java/com/itbank/model/OrderListDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="379" x="2459" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="10" language="java" name="com.itbank.service.ItemService" project="project2" 
+    file="/project2/src/main/java/com/itbank/service/ItemService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="231" x="1895" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="11" language="java" name="com.itbank.model.ProductDAO" project="project2" 
+    file="/project2/src/main/java/com/itbank/model/ProductDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="332" x="4067" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="12" language="java" name="com.itbank.service.ProductService" project="project2" 
+    file="/project2/src/main/java/com/itbank/service/ProductService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="268" width="349" x="4067" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="13" language="java" name="com.itbank.model.EventDAO" project="project2" 
+    file="/project2/src/main/java/com/itbank/model/EventDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="232" width="291" x="1029" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="14" language="java" name="com.itbank.service.AddressService" project="project2" 
+    file="/project2/src/main/java/com/itbank/service/AddressService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="178" width="318" x="3709" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="15" language="java" name="com.itbank.model.NoticeDAO" project="project2" 
+    file="/project2/src/main/java/com/itbank/model/NoticeDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="124" width="226" x="1629" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="16" language="java" name="com.itbank.controller.ProductController" project="project2" 
+    file="/project2/src/main/java/com/itbank/controller/ProductController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="250" width="429" x="2878" y="62"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="com.itbank.service.ChatService" project="project2" 
+    file="/project2/src/main/java/com/itbank/service/ChatService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="289" x="5248" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="com.itbank.controller.CenterCtroller" project="project2" 
+    file="/project2/src/main/java/com/itbank/controller/CenterCtroller.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="232" width="407" x="1448" y="62"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="19" language="java" name="com.itbank.model.ChatDAO" project="project2" 
+    file="/project2/src/main/java/com/itbank/model/ChatDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="124" width="346" x="5248" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="20" language="java" name="com.itbank.model.TradeDAO" project="project2" 
+    file="/project2/src/main/java/com/itbank/model/TradeDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="268" width="319" x="4889" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="21" language="java" name="com.itbank.model.ReceiptDAO" project="project2" 
+    file="/project2/src/main/java/com/itbank/model/ReceiptDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="124" width="383" x="3286" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="22" language="java" name="com.itbank.controller.TradeController" project="project2" 
+    file="/project2/src/main/java/com/itbank/controller/TradeController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="232" width="324" x="4887" y="62"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="com.itbank.controller.ChatController" project="project2" 
+    file="/project2/src/main/java/com/itbank/controller/ChatController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="288" x="5251" y="62"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="com.itbank.service.OrderListService" project="project2" 
+    file="/project2/src/main/java/com/itbank/service/OrderListService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="160" width="372" x="2466" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="25" language="java" name="com.itbank.model.AddressDAO" project="project2" 
+    file="/project2/src/main/java/com/itbank/model/AddressDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="160" width="318" x="3709" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="26" language="java" name="com.itbank.service.MemberService" project="project2" 
+    file="/project2/src/main/java/com/itbank/service/MemberService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="358" width="260" x="2166" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="com.itbank.service.NoticeService" project="project2" 
+    file="/project2/src/main/java/com/itbank/service/NoticeService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="160" width="201" x="1612" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="com.itbank.service.ReceiptService" project="project2" 
+    file="/project2/src/main/java/com/itbank/service/ReceiptService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="383" x="3286" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="com.itbank.controller.ItemController" project="project2" 
+    file="/project2/src/main/java/com/itbank/controller/ItemController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="241" x="1895" y="62"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="30" language="java" name="com.itbank.model.MemberDAO" project="project2" 
+    file="/project2/src/main/java/com/itbank/model/MemberDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="232" width="241" x="2166" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="31" language="java" name="com.itbank.controller.MypageController" project="project2" 
+    file="/project2/src/main/java/com/itbank/controller/MypageController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="502" width="440" x="3347" y="62"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="com.itbank.service.EventService" project="project2" 
+    file="/project2/src/main/java/com/itbank/service/EventService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="232" width="291" x="1030" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="33" language="java" name="com.itbank.model.ShoppingDAO" project="project2" 
+    file="/project2/src/main/java/com/itbank/model/ShoppingDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="393" x="4456" y="1038"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="34" language="java" name="com.itbank.service.ShoppingService" project="project2" 
+    file="/project2/src/main/java/com/itbank/service/ShoppingService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="160" width="393" x="4456" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="com.itbank.service.WishListService" project="project2" 
+    file="/project2/src/main/java/com/itbank/service/WishListService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="160" width="368" x="2878" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="com.itbank.mail.Hash" project="project2" 
+    file="/project2/src/main/java/com/itbank/mail/Hash.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="154" x="5577" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="com.itbank.chat.ChatComponent" project="project2" 
+    file="/project2/src/main/java/com/itbank/chat/ChatComponent.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="178" width="380" x="672" y="62"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="com.itbank.mail.MailService" project="project2" 
+    file="/project2/src/main/java/com/itbank/mail/MailService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="234" x="5771" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="com.itbank.controller.MailController" project="project2" 
+    file="/project2/src/main/java/com/itbank/controller/MailController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="124" width="372" x="5633" y="62"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="com.itbank.controller.HomeController" project="project2" 
+    file="/project2/src/main/java/com/itbank/controller/HomeController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="296" x="4067" y="62"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="41">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="42" name="dao"/>      
+      <multiplicity id="43" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="44">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="45" name="dao"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="47">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="48" name="dao"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="50">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="51" name="dao"/>      
+      <multiplicity id="52" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="53">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="54" name="ns"/>      
+      <multiplicity id="55" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="56">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="57" name="dao"/>      
+      <multiplicity id="58" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="59">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="60" name="ts"/>      
+      <multiplicity id="61" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="62">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="63" name="os"/>      
+      <multiplicity id="64" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="65">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="66" name="dao"/>      
+      <multiplicity id="67" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="68">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="69" name="ws"/>      
+      <multiplicity id="70" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="71">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="72" name="mailService"/>      
+      <multiplicity id="73" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="74">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="75" name="ms"/>      
+      <multiplicity id="76" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="77">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="78" name="dao"/>      
+      <multiplicity id="79" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="80">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="81" name="qs"/>      
+      <multiplicity id="82" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="83">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="84" name="as"/>      
+      <multiplicity id="85" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="86">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="87" name="ol"/>      
+      <multiplicity id="88" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="89">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="90" name="es"/>      
+      <multiplicity id="91" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="92">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="93" name="hash"/>      
+      <multiplicity id="94" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="95">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="96" name="dao"/>      
+      <multiplicity id="97" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="98">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="99" name="ms"/>      
+      <multiplicity id="100" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="101">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="102" name="is"/>      
+      <multiplicity id="103" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="104">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="105" name="dao"/>      
+      <multiplicity id="106" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="107">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="108" name="dao"/>      
+      <multiplicity id="109" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="110">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="111" name="as"/>      
+      <multiplicity id="112" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="113">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="114" name="dao"/>      
+      <multiplicity id="115" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="116">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="117" name="ps"/>      
+      <multiplicity id="118" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="119">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="120" name="cs"/>      
+      <multiplicity id="121" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="122">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="123" name="rs"/>      
+      <multiplicity id="124" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="125">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="126" name="ws"/>      
+      <multiplicity id="127" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="128">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="129" name="rs"/>      
+      <multiplicity id="130" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="131">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="132" name="ts"/>      
+      <multiplicity id="133" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="134">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="135" name="ms"/>      
+      <multiplicity id="136" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="137">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="138" name="dao"/>      
+      <multiplicity id="139" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="140">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="141" name="dao"/>      
+      <multiplicity id="142" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="143">    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="144" name="ps"/>      
+      <multiplicity id="145" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="146">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="147" name="is"/>      
+      <multiplicity id="148" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="149">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="150" name="ss"/>      
+      <multiplicity id="151" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

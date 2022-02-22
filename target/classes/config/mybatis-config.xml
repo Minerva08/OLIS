@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC 
+	"-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+	
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="false" />
+		<setting name="useGeneratedKeys" value="false" />
+		<setting name="mapUnderscoreToCamelCase" value="false" />
+		<!-- 	user_name => userName	-->
+	</settings>
+	
+	<typeAliases>
+		<typeAlias type="com.itbank.model.ProductDTO" alias="product"/>
+		<typeAlias type="com.itbank.model.TradeDTO" alias="trade"/>
+		<typeAlias type="com.itbank.model.MemberDTO" alias="member"/>		
+		<typeAlias type="com.itbank.model.WishListDTO" alias="WishList"/>		
+		<typeAlias type="com.itbank.model.TradeReplyDTO" alias="tradeReply"/>
+		<typeAlias type="com.itbank.model.ChatDTO" alias="chat"/>
+		<typeAlias type="com.itbank.model.EventDTO" alias="event"/>
+		<typeAlias type="com.itbank.model.OrderListDTO" alias="order"/>		
+		<typeAlias type="com.itbank.model.ReceiptDTO" alias="receipt"/>				
+		<typeAlias type="com.itbank.model.ShoppingDTO" alias="shopping"/>	
+		<typeAlias type="com.itbank.model.PagingDTO" alias="paging"/>						
+		<typeAlias type="com.itbank.model.NoticeDTO" alias="notice"/>						
+		<typeAlias type="com.itbank.model.QnADTO" alias="qna"/>						
+					
+	</typeAliases>
+</configuration>

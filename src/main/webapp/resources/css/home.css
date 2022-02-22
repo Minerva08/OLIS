@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+.hidden {
+	opacity: 0;
+}
+
+.hiddenNone {
+	display: none;
+}
+
+.home>.home_component {
+	width: 100%;
+}
+
+.home>.home_component>.event_animation {
+	height: 480px;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 140px;
+	position: relative;
+}
+
+.home>.home_component>.event_animation>.event_leftBtn {
+	position: absolute;
+	left: 30px;
+	top: 50%;
+	width: 37px;
+	height: 37px;
+	-webkit-transform: rotate(180deg);
+	background:
+		url(https://www.feelway.com/src/images/1.5/icon-swiper-button.svg);
+	z-index: 1;
+	border: none;
+	cursor: pointer;
+}
+
+.home>.home_component>.event_animation>.event_rightBtn {
+	position: absolute;
+	right: 30px;
+	top: 50%;
+	width: 37px;
+	height: 37px;
+	background:
+		url(https://www.feelway.com/src/images/1.5/icon-swiper-button.svg);
+	z-index: 1;
+	border: none;
+	cursor: pointer;
+}
+
+.home>.home_component>.event_animation>.home_radio {
+	position: absolute;
+	z-index: 1;
+	top: 90%;
+	width: 100%;
+	cursor: pointer;
+}
+/*라디오*/
+.home_radio input[type=radio]{
+	display: none;
+}
+
+.home_radio_bullets{
+	position:absolute;
+	left:50%;
+	
+	transform:translateX(-50%);
+	bottom:20px;
+	z-index:2;
+}
+.home_radio_bullets label{
+	display:inline-block;
+	border-radius: 50%;
+	background-color: #EFEFEF;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+.home_radio_bullets label:first-child{
+	background-color: black;
+}
+
+
+.home>.home_component>.event_animation>ul {
+	height: 100%;
+	float: left;
+}
+
+.home>.home_component>.event_animation>ul>li {
+	width: 100%;
+	height: 480px;
+	transition-duration: 1.5s;
+	z-index: -1;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+.home>.home_component>.event_animation>ul>li>img{
+	width: 100%;
+	height: 100%;
+}
+
+.home>.home_component>.home_product {
+	height: 520px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.home>.home_component>.home_product>.product_title {
+	margin: 40px auto 0;
+	max-width: 1280px;
+	width: 1200px;
+	padding: 0 40px;
+}
+
+.home>.home_component>.home_product>.product_title>.title {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.home>.home_component>.home_product>.product_title>.sub_title {
+	font-size: 14px;
+	color: rgba(34, 34, 34, .5);
+}
+
+.home>.home_component>.home_product>.product_list_wrap {
+	margin: 0 auto 40px;
+	width: 1200px;
+	height: 440px;
+	padding: 0 40px;
+
+	/* 	transition-duration: 0.5s; */
+}
+
+.home>.home_component>.product_add {
+	width: 80px;
+	height: 42px;
+	margin: 50px auto;
+	border: 1px solid #dadada;
+	border-radius: 12px;
+	cursor: pointer;
+	color: grey;
+	padding: 0 20px;
+}
+
+.home>.home_component>.home_product>.product_list_wrap>.product_itemList
+	{
+	margin: 0 auto;
+	width: 100%;
+	height: 1500px;
+	flex-wrap: wrap;
+}
+
+/* s===================== 아이템 리스트 ============================== */
+.home>.home_component>.home_product>.product_list_wrap>.product_itemList>.item_box
+	{
+	margin: 20px 0;
+	margin-right: 18px;
+	float: left;
+	width: 270px;
+	height: 392px;
+	border-radius: 7px;
+	padding: 7px;
+}
+
+.home>.home_component>.home_product>.product_list_wrap>.product_itemList>.item_box:nth-child(4n)
+	{
+	margin-right: 0;
+}
+
+.home>.home_component>.home_product>.product_list_wrap>.product_itemList>.item_box>.item_img
+	{
+	width: 100%;
+	height: 282px;
+	cursor: pointer;
+}
+.home>.home_component>.home_product>.product_list_wrap>.product_itemList>.item_box>.item_img img
+	{
+	border-radius: 8px;
+}
+
+.home>.home_component>.home_product>.product_list_wrap>.product_itemList>.item_box>.item_brand
+	{
+	width: 100%;
+	height: 19px;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 2px 0;
+	text-decoration: underline;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.home>.home_component>.home_product>.product_list_wrap>.product_itemList>.item_box>.item_title
+	{
+	width: 100%;
+	height: 34px;
+	font-size: 14px;
+	margin: 8px 0px;
+	cursor: pointer;
+}
+
+.home>.home_component>.home_product>.product_list_wrap>.product_itemList>.item_box>.item_price
+	{
+	font-weight: bold;
+	width: 100%;
+	height: 17px;
+	font-size: 15px;
+}
+
+.home>.home_component>.home_product>.product_list_wrap>.product_itemList>.item_box>.item_price+div
+	{
+	color: grey;
+	font-size: 11px;
+}
+.home_event1 {
+    width: 100%;
+    height: 482px;
+    margin-bottom: 90px;
+}
+/* s=================================================== */

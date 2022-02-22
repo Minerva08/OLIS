@@ -1,0 +1,205 @@
+@charset "utf-8";
+/* ========================채팅창======================== */
+.chat_screen {
+	position: fixed;
+	width: 500px;
+	height: 500px;
+	border: 2px solid black;
+	background-color: #BDD1DC;
+	top: 50%;
+	left: 50%;
+	box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 50;
+}
+
+.chat_screen>.component {
+	position: relative;
+	height: 100%;
+	padding-top: 45px;
+}
+
+.chat_screen>.opponent_title {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	border-bottom: 2px solid black;
+	text-align: center;
+	line-height: 40px;
+	font-weight: 700;
+}
+
+.chat_screen>.chat_closeBtn {
+	position: fixed;
+	top: 3px;
+	right: 10px;
+	font-size: 21px;
+	cursor: pointer;
+	width: 15px;
+	z-index: 1;
+}
+
+.chat_screen>.component>.chat_talkBox>.chat_notice {
+	padding: 5px 10px;
+	text-align: center;
+	margin: 5px auto;
+	width: 300px;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 10px;
+	font-size: 13px;
+}
+
+.chat_screen>.component>.chat_talkBox {
+	overflow-y: auto;
+	padding-bottom: 10px;
+	height: 418px
+}
+
+.chat_screen>.chat_input {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 30px;
+	margin: 5px;
+}
+
+.chat_screen>.chat_input>input:first-child {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 410px;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+
+.chat_screen>.chat_input>input:last-child {
+	position: absolute;
+	width: 50px;
+	height: 30px;
+	background-color: yellow;
+	border: none;
+	border-radius: 5px;
+	right: 5px;
+	bottom: 0;
+	cursor: pointer;
+}
+
+/* // ===================채팅 css==================== */
+.chatBtn {
+	background-color: #dadada;
+	padding: 6px 10px;
+	width: 84px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.chatList {
+	position: fixed;
+	right: -250px;
+	top: 100px;
+	width: 250px;
+	height: 88%;
+	box-shadow: -1px -2px 9px black;
+	overflow-y: auto;
+	background-color: #BDD1DC;
+	transition-duration: 0.8s;
+	z-index: 20;
+}
+
+.chatList>.title {
+	width: 100%;
+	height: 50px;
+	border-bottom: 2px solid black;
+	line-height: 50px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+	background-color: beige;
+}
+
+.chatList>.list>.chat_box {
+	height: 60px;
+	border-bottom: 2px solid black;
+	padding: 5px;
+	background-color: white;
+}
+
+.chatList>.list>.chat_box>.profile {
+	width: 40px;
+	height: 40px;
+	margin-right: 5px;
+}
+
+.chatList>.list>.chat_box>.profile img {
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+}
+
+.chatList>.list>.chat_box>.content {
+	height: 100%;
+}
+
+.chatList>.list>.chat_box>.content>.user_name {
+	height: 25px;
+	font-size: 14px;
+}
+
+.chatList>.list>.chat_box>.content>.last_talk {
+	height: 100%;
+	font-size: 13px;
+}
+
+.chat_screen>.component>.chat_talkBox>.self {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	margin: auto;
+	margin-right: 0;
+	padding: 5px;
+	flex-flow: column;
+}
+
+.chat_screen>.component>.chat_talkBox>.self>div {
+	justify-content: flex-end;
+	display: flex;
+	font-weight: bold;
+}
+
+.chat_screen>.component>.chat_talkBox>.self>span {
+	border-radius: 5px;
+	padding: 5px 10px;
+	margin-top: 5px;
+	box-shadow: 1px 1px 1px darkgrey;
+	cursor: pointer;
+	background-color: yellow;
+}
+
+.chat_screen>.component>.chat_talkBox>.opponent {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: column;
+	padding: 5px;
+}
+
+.chat_screen>.component>.chat_talkBox>.opponent>div {
+	justify-content: flex-end;
+	display: flex;
+	font-weight: bold;
+}
+
+.chat_screen>.component>.chat_talkBox>.opponent>span {
+	border-radius: 5px;
+	padding: 5px 10px;
+	margin-top: 5px;
+	box-shadow: 1px 1px 1px darkgrey;
+	cursor: pointer;
+	background-color: white;
+}

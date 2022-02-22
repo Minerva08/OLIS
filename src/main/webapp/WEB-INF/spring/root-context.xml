@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:websocket="http://www.springframework.org/schema/websocket"
+	xsi:schemaLocation="http://www.springframework.org/schema/websocket http://www.springframework.org/schema/websocket/spring-websocket-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@192.168.1.100:1521:xe" />
+		<property name="username" value="c##jr" />
+		<property name="password" value="it" />
+	</bean>
+	
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<constructor-arg ref="hikariConfig" />
+	</bean>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" /> 
+		<property name="configLocation" value="classpath:config/mybatis-config.xml" />
+		<property name="mapperLocations">
+			<list>
+				<value>classpath:config/sqlmap-chat.xml</value>
+				<value>classpath:config/sqlmap-member.xml</value>
+				<value>classpath:config/sqlmap-myPage.xml</value>
+				<value>classpath:config/sqlmap-product.xml</value>
+				<value>classpath:config/sqlmap-trade.xml</value>
+				<value>classpath:config/sqlmap-wishlist.xml</value>
+				<value>classpath:config/sqlmap-event.xml</value>
+				<value>classpath:config/sqlmap-orderlist.xml</value>
+				<value>classpath:config/sqlmap-receipt.xml</value>
+				<value>classpath:config/sqlmap-shopping.xml</value>
+				<value>classpath:config/sqlmap-qna.xml</value>
+				<value>classpath:config/sqlmap-notice.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<websocket:handlers allowed-origins="*">
+		<websocket:mapping handler="chatComponent" path="/chat" />
+		<websocket:sockjs websocket-enabled="true" />
+	</websocket:handlers>
+	
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="close">
+		<constructor-arg ref="sqlSessionFactory" />
+	</bean>	
+	
+	<context:component-scan base-package="com.itbank.service" />
+	<context:component-scan base-package="com.itbank.mail"/> 
+	<context:component-scan base-package="com.itbank.chat"/>
+	<mybatis-spring:scan base-package="com.itbank.model" />  
+</beans>

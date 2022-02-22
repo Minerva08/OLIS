@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+.evetn_list >.df>div{
+    display: flex;
+    align-items: center;
+}
+
+.event_list>.eventList_div {
+	width: 970px;
+    margin: 10px auto;
+    flex-flow: wrap;
+    display: flex;
+}
+.event_list > .eventList_div>.eventList_items{
+	width: 400px;
+	height: 160px;
+	margin:15px 25px;
+	margin-left: 55px;
+	
+}
+.event_list{
+	margin-top:140px;
+}
+.event_list>h2{
+	font-family: -apple-system;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.event_list>.event_top>.group{
+	width:1200px;
+	   justify-content: flex-end;
+    display: flex;
+}
+
+.event_list>.eventList_div > .eventList_items >.event_title{
+	padding-top: 25px;
+	padding-left: 15px;
+}
+.event_list > .event_top > ul>li{
+	width: 260px;
+	text-align: center;
+	border-right: 2px solid darkgrey;
+	height: 30px;
+	
+}
+.event_list > .event_top > ul>li:nth-child(4){
+	border-right: 0;
+}
+.event_list > .event_top > ul>li>.eventList_search{
+	border: 1px solid grey;
+	border-radius: 30px;
+	background-color: white;
+	width: 200px;
+	margin-left: 30px;
+	height: 35px;
+	
+}
+.event_list > .event_top > ul>li>.eventList_search>form>input:nth-child(1){
+	border: 0px;
+	outline: none;
+	border-bottom: 1px solid darkgrey;
+	width: 140px;
+
+}
+.event_list > .event_top > ul>li>.eventList_search>form>input:nth-child(2){
+	display: none;
+}
+
+.event_list > .event_top > ul{
+	width: 900px;
+	margin: 20px auto;
+	margin-top:30px;
+	font-size: 20px;
+	color: grey;
+	font-weight: bold;
+	padding-bottom:20px;
+	border-bottom: 1px solid darkgrey;
+	
+}
+.event_list >.df{
+	width: 1200px;
+	margin-left: 300px;
+}
+.event_list > .paging_event{
+	margin:20px auto;
+    justify-content: center;
+}
+
+.event_list > .paging_event>a{
+	width: 40px;
+	font-size: 18px;
+	text-align: center;
+}
+.event_list >.eventList_div>.eventList_items>.event_title>.content{
+overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 1;
+   -webkit-box-orient: vertical;
+}
+
+.event_list >.eventList_div>p{
+	width:160px; 
+	margin: 10px auto; 
+	font-weight: bold;
+	
+}

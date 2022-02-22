@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+   "-//mybatis.org//DTD Mapper 3.0//EN" 
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   
+<mapper namespace="com.itbank.model.NoticeDAO">
+	<insert id="insertNotice" parameterType="notice">
+		insert into notice values(
+		notice_seq.nextval,
+		#{notice_category},
+		#{notice_date},
+		#{notice_content},
+		#{notice_title})
+	</insert>
+</mapper>
+  

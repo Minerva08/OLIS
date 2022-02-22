@@ -1,0 +1,368 @@
+@charset "utf-8";
+
+.input_numberNone[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+
+.input_numberNone[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+.input_placeholder::-webkit-input-placeholder {
+	color: red;
+}
+
+#pw_span_ment {
+	color: gray;
+	font-size: 12px;
+}
+
+.member_login_main {
+	width: 80%;
+	min-width: 400px;
+	margin: auto;
+	height: 600px;
+}
+
+.login_content {
+	width: 400px;
+	padding-top: 40px;
+	margin: auto;
+}
+
+.login_content>form>p {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.login_logo {
+	font-size: 27px;
+	font-weight: bold;
+}
+
+.login_content>form>div>input {
+	outline: none;
+	width: 100%;
+	border: none;
+	border-bottom: 0.5px solid #dadada;
+}
+
+.login_div {
+	padding: 50px 0 10px 0;
+}
+
+.login_div>#login {
+	width: 400px;
+	height: 52px;
+	background-color: #ebebeb;
+	border: none;
+	border-radius: 15px;
+	color: white;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.login_bottom {
+	display: flex;
+	justify-content: center;
+}
+
+.login_bottom>li {
+	padding: 0 25px;
+}
+
+.login_bottom>li:nth-child(1) {
+	border-right: 1px solid #dadada;
+}
+
+.login_bottom>li:nth-child(2) {
+	border-right: 1px solid #dadada;
+}
+
+.login_bottom>li>a {
+	font-size: 13px;
+}
+
+.input_email {
+	padding-bottom: 20px;
+}
+
+/*회원가입---------------------------------------*/
+.join_authDiv {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 23px;
+}
+
+#join_auth_child1 {
+	width: 100px;
+}
+
+#join_authNumberBtn {
+	width: 90px;
+	background-color: black;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.join_section {
+	width: 80%;
+	min-width: 400px;
+	margin: auto;
+	height: 600px;
+}
+
+.join_section>.join_div {
+	width: 400px;
+	padding-top: 40px;
+	margin: auto;
+}
+
+.join_section>.join_div>div>div>input {
+	outline: none;
+	width: 100%;
+	border: none;
+	border-bottom: 0.5px solid #dadada;
+	height: 25px;
+}
+
+.join_section>.join_div>form>div>div>input {
+	outline: none;
+	width: 100%;
+	border: none;
+	border-bottom: 0.5px solid #dadada;
+	height: 25px;
+}
+
+.join_span {
+	font-size: 27px;
+	font-weight: bold;
+}
+
+.join_div>div>p {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.join_div>form>div>p {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.join_div>form>div {
+	margin-bottom: 23px;
+}
+
+.join_div>form>div>#join {
+	width: 400px;
+	height: 52px;
+	background-color: #ebebeb;
+	border: none;
+	border-radius: 15px;
+	color: white;
+	font-size: 18px;
+}
+
+#duplicate_email_btn {
+	width: 90px;
+	background-color: #ebebeb;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#duplicate_nick_btn {
+	width: 90px;
+	background-color: #ebebeb;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/*이메일찾기---------------------------------------*/
+.find_email_href>a {
+	padding: 0px 10px 0px 10px;
+}
+
+.find_email_href>a:nth-child(1) {
+	border-right: 0.5px solid #dadada;
+}
+
+.find_email_success_title>h2 {
+	margin: 0;
+}
+
+.find_email_email_result {
+	margin: 50px;
+	border-bottom: 1px solid black;
+}
+
+.member_find_pw {
+	width: 80%;
+	min-width: 400px;
+	margin: auto;
+	height: 600px;
+}
+
+.member_find_pw_div {
+	width: 400px;
+	padding-top: 40px;
+	margin: auto;
+}
+
+.member_top {
+	font-size: 27px;
+	font-weight: bold;
+	padding-bottom: 40px;
+	border-bottom: 2px solid black;
+}
+
+.ment {
+	text-align: left;
+	padding: 40px 0px 30px 0px;
+	font-size: 14px;
+}
+
+.find_pw_form>span {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.component {
+	display: flex;
+	flex-flow: column;
+}
+
+.component>input {
+	outline: none;
+	width: 100%;
+	border: none;
+	border-bottom: 0.5px solid #dadada;
+	margin: 10px 0px 10px 0px;
+}
+
+.component>input:nth-child(2) {
+	width: 400px;
+	height: 52px;
+	background-color: #ebebeb;
+	border: none;
+	border-radius: 15px;
+	color: white;
+	font-size: 18px;
+	padding: 0;
+	cursor: pointer;
+}
+
+.find_pw_authBox>div>span {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.find_pw_success_auth {
+	display: flex;
+	flex-flow: column;
+}
+
+.find_pw_success_auth>input:nth-child(1) {
+	outline: none;
+	width: 100%;
+	border: none;
+	border-bottom: 0.5px solid #dadada;
+	margin: 10px 0px 10px 0px;
+}
+
+.find_pw_success_auth>input:nth-child(2) {
+	width: 400px;
+	height: 52px;
+	background-color: #ebebeb;
+	border: none;
+	border-radius: 15px;
+	color: white;
+	font-size: 18px;
+	padding: 0;
+	margin: 10px 0px 10px 0px;
+	cursor: pointer;
+}
+
+.find_pw_hidden>div>span {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#find_newPassword_input1, #find_newPassword_input2 {
+	outline: none;
+	width: 100%;
+	border: none;
+	border-bottom: 0.5px solid #dadada;
+	margin: 10px 0px 10px 0px;
+}
+
+#find_newPassword_submit {
+	width: 400px;
+	height: 52px;
+	background-color: #ebebeb;
+	border: none;
+	border-radius: 15px;
+	color: white;
+	font-size: 18px;
+	padding: 0;
+	margin: 10px 0px 10px 0px;
+	cursor: pointer;
+}
+
+/*-----------------------------------*/
+.member_find_email {
+	width: 80%;
+	min-width: 400px;
+	margin: auto;
+	height: 600px;
+}
+
+.member_find_email_div {
+	width: 400px;
+	padding-top: 40px;
+	margin: auto;
+	height: 600px;
+}
+
+.find_email_top>span {
+	width: 400px;
+	font-size: 27px;
+	font-weight: bold;
+	padding-bottom: 40px;
+	border-bottom: 2px solid black;
+	text-align: center;
+}
+
+.find_email_middle {
+	text-align: left;
+	padding: 40px 0px 30px 0px;
+	font-size: 14px;
+}
+
+#find_email_phoneNumber>span {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#find_form>input:nth-child(1) {
+	outline: none;
+	width: 100%;
+	border: none;
+	border-bottom: 0.5px solid #dadada;
+	margin: 10px 0px 10px 0px;
+}
+
+#find_form>input:nth-child(2) {
+	width: 400px;
+	height: 52px;
+	background-color: #ebebeb;
+	border: none;
+	border-radius: 15px;
+	color: white;
+	font-size: 18px;
+	padding: 0;
+	margin: 10px 0px 10px 0px;
+	cursor: pointer;
+}

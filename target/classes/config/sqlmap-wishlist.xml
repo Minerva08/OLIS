@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+   "-//mybatis.org//DTD Mapper 3.0//EN" 
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   
+<mapper namespace="com.itbank.model.WishListDAO">
+	<select id="getWishList" parameterType="hashmap" resultType="wishList">
+		select * from WishList where wish_user_nickname=#{wish_user_nickname}
+		<if test="wish_model_num != null">
+			and wish_model_num=#{wish_model_num}
+		</if>
+		order by wish_idx desc 
+		<if test="page != null">
+			offset ${page} rows fetch first 10 rows only
+		</if>
+	</select>
+	
+	<delete id="wishItemdelete" parameterType="hashmap">
+		delete wishlist where 
+			<choose>
+				<when test="wish_idx != null">
+					wish_idx=#{wish_idx}
+				</when>
+				<otherwise>
+					wish_size=#{wish_size} and wish_model_num=#{wish_model_num}
+				</otherwise>
+			</choose>
+	</delete>
+</mapper>

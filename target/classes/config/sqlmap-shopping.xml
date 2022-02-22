@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+   "-//mybatis.org//DTD Mapper 3.0//EN" 
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itbank.model.ShoppingDAO">
+	<select id="getListshopping" resultType="shopping" parameterType="hashmap">
+		select * from shopping where shopping_user_nickname=#{shopping_user_nickname}
+			order by shopping_idx desc
+			<if test="page != null">
+				offset ${page} rows fetch first 10 rows only
+			</if>
+	</select>
+</mapper>

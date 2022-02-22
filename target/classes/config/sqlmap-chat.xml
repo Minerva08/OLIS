@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+	"-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itbank.model.ChatDAO">
+	<select id="selectList" resultType="chat">
+		select DISTINCT * from chat
+		where rowid in (select max(rowid) from chat where
+		opponent_name=#{user_nickname}
+		or
+		self_name=#{user_nickname} group by room_idx) order by chat_idx desc
+	</select>
+
+	<select id="selectListAll" resultType="chat"
+		parameterType="hashmap">
+		select * from chat where
+		((opponent_name=#{opponent_name} and self_name=#{self_name})
+		or
+		(opponent_name=#{self_name} and self_name=#{opponent_name}))
+		and room_idx=#{room_idx} order by chat_idx
+	</select>
+
+
+	<insert id="insert" parameterType="chat">
+		insert into chat values(
+		chat_seq.nextval,
+		#{opponent_name},
+		#{self_name},
+		<if test="self_content != null">
+			#{self_content},
+		</if>
+		<if test="self_content == null">
+			null,
+		</if>
+		sysdate,
+		#{room_idx}
+		)
+	</insert>
+</mapper>
+
+
+
+
+

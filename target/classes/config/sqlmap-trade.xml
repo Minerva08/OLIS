@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+   "-//mybatis.org//DTD Mapper 3.0//EN" 
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   
+<mapper namespace="com.itbank.model.TradeDAO">
+	<update id="trade_delete" parameterType="Int">
+		update trade set deleted='Y' where trade_idx=#{trade_idx}
+	</update> 
+
+   <select id="getList" resultType="trade" parameterType="hashmap">
+      select * from trade where deleted='N'
+      	<if test="trade_writer != null">
+      		and trade_writer=#{trade_writer}
+      	</if>
+      	<if test="category != null">
+      		and trade_category=#{category}
+      	</if>
+      	<if test="search != null">
+      		and 
+      		trade_writer like '%${search}%'
+      		or
+      		trade_category like '%${search}%' 
+      		or
+      		trade_title like '%${search}%' 
+      	</if> 
+      	
+      	order by ${order} desc
+      	<if test="page != null">
+      		offset ${page} rows fetch first 12 rows only
+      	</if>
+   </select>
+   
+   <insert id="insert" parameterType="trade">
+		insert into trade values (
+		trade_seq.nextval, 
+		#{trade_writer}, 
+		#{trade_img1},
+		<if test="trade_img2 != null">
+			#{trade_img2},
+		</if>
+		<if test="trade_img2 == null">
+			null,
+		</if>
+		<if test="trade_img3 != null">
+			#{trade_img3},
+		</if>
+		<if test="trade_img3 == null">
+			 null,
+		</if>
+		sysdate,
+		'x',
+		#{trade_content}, 
+		#{trade_price},
+		#{trade_category},  
+		null,
+		#{trade_title},
+		<if test="trade_user_profile == null">
+			'http://ipon.co.kr/common/img/default_profile.png',
+		</if>
+		<if test="trade_user_profile != null">
+			#{trade_user_profile},
+		</if>
+		0
+		)
+	</insert>
+   
+    <insert id="insertReply" parameterType="map" >
+   		insert into tradeReply (
+	   		tradeReply_idx,
+	   		tradeReply_user_nick,
+	   		tradeReply_user_profile,
+	   		tradeReply_comment,
+	   		trade_idx) 
+   		values(
+	   		TRADEREPLY_SEQ.nextval,
+	   		#{tradeReply_user_nick},
+	   		#{tradeReply_user_profile},
+	   		#{tradeReply_comment},
+	   		${trade_idx}
+   		)
+   </insert>
+   
+   <select id="selectRep" resultType="tradeReply">
+   		select * from tradeReply where trade_idx=#{trade_idx} order by tradeReply_idx desc
+   </select>
+   
+    <update id="modifyReply" parameterType="hashmap">
+         update tradeReply 
+         set tradeReply_comment=#{tradeReply_comment} 
+         where tradeReply_idx=#{tradeReply_idx}
+   </update>
+   
+   <delete id="deleteReply" parameterType="int">
+   		delete from tradeReply where tradeReply_idx=#{tradeReply_idx}
+   </delete>
+   
+   <update id="myPagesaleUpdte" parameterType="trade">
+   		update trade set 
+				trade_upload_date=#{trade_upload_date},
+				trade_content=#{trade_content},
+				trade_price=#{trade_price},
+				trade_category=#{trade_category},
+				trade_title=#{trade_title}
+				<if test="trade_img1 != null">
+					,trade_img1=#{trade_img1}
+				</if>
+				<if test="trade_img2 != null">
+					,trade_img2=#{trade_img2}
+				</if>
+				<if test="trade_img3 != null">
+					,trade_img3=#{trade_img3}				
+				</if>
+				where trade_idx=#{trade_idx}
+	</update>
+   <update id="likeCount" parameterType="hashmap">
+         update trade
+         set trade_like_count=trade_like_count+#{trade_like_count}
+         where trade_idx=#{trade_idx}
+   </update>
+</mapper>
+
+
+
+

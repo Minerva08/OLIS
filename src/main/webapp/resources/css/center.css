@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+.noticed {
+	width: 80%;
+	margin: auto;
+	padding-top: 40px;
+}
+
+.noticed>.center_left {
+	width: 20%;
+	min-width: 180px;
+}
+
+.noticed>.center_left>ul {
+	min-width: 160px;
+}
+
+.noticed>.center_left>ul>li {
+	margin: 0;
+}
+
+.noticed>.notice_right, .noticed>.qna_right {
+	width: 80%;
+	min-width: 600px;
+}
+
+#content_qna, #content_notice {
+	white-space: pre-line;
+	font-size: 15px;
+}
+
+.noticed>.qna_right>.qna_list>.idx, .noticed>.notice_right>.notice_list>.idx
+	{
+	border-bottom: 1px solid #ebebeb;
+	height: 65px;
+	align-items: center;
+	cursor: pointer
+}
+
+#qna_pageing, #notice_pageing {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 80px;
+}
+
+#qna_pageing>a, #notice_pageing>a {
+	width: 40px;
+	height: inherit;
+	cursor: pointer;
+}
+
+.noticed>.qna_right>#filter_qna>a>button, .noticed>.qna_right>#filter_qna>button
+	{
+	border: 1px solid #ebebeb;
+	border-radius: 20px;
+	color: darkgray;
+	background-color: white;
+	width: 70px;
+	height: 42px;
+	margin-top: 10px;
+	margin-right: 8px;
+	font-size: 12.5px;
+}
+
+.noticed>.qna_right>.qna_top, .noticed>.notice_right>.notice_top {
+	border-bottom: 3px solid black;
+}
+
+.noticed>.qna_right>.qna_top>h3, .noticed>.notice_right>.notice_top>h3 {
+	margin-top: 0px;
+	font-size: 24px;
+}
+
+.noticed>.center_left>ul>li>h1 {
+	font-weight: bolder;
+	font-size: 32px;
+	display: inline-block;
+	margin: 0;
+}
+
+.noticed>.qna_right>#filter_qna {
+	border-bottom: 2px solid #ebebeb;
+	height: 70px;
+}
+.noticed>.qna_right>#filter_qna  button {
+	cursor: pointer;
+}
+
+.noticed>.center_left>ul>li:nth-child(1) {
+	height: 65px;
+}
+
+.noticed>.center_left>ul>li:nth-child(2), .noticed>.center_left>ul>li:nth-child(3)
+	{
+	height: 28px;
+	color: darkgrey;
+}
+
+.noticed>.notice_right>.notice_content>.detail_top {
+	border-bottom: 1px solid #ebebeb;
+}
+
+.noticed>.notice_right>.notice_content>pre {
+	white-space: pre-line;
+	background-color: #fafafa;
+	padding: 25px;
+}
+
+.noticed>.qna_right>.qna_list>pre {
+	white-space: pre-line;
+	background-color: #fafafa;
+	border-bottom: 1px solid #ebebeb;
+	padding: 25px;
+}
+
+.noticed>.notice_right>div>#back {
+	width: 120px;
+	height: 40px;
+	font-size: 14px;
+	background-color: white;
+	color: grey;
+	border-radius: 10px;
+	border: 2px solid #ebebeb;
+	margin: 15px auto;
+	cursor: pointer;
+}

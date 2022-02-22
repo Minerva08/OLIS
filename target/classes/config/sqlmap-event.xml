@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+   "-//mybatis.org//DTD Mapper 3.0//EN" 
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   
+<mapper namespace="com.itbank.model.EventDAO">
+   <select id="searchEventList" resultType="event">
+      select * from event where event_title like '%%${search_event}%%' order by event_idx DESC  
+      offset   #{offset}  rows  
+      fetch first #{cntPerPage} rows only
+   </select>
+   
+     <!-- <select id="getEventList" resultType="event">
+      SELECT * 
+         FROM (
+            SELECT ROWNUM RN, A.* 
+               FROM (
+                     SELECT * 
+                     FROM event 
+                     ORDER BY event_idx DESC 
+                     ) A
+               )
+      WHERE RN BETWEEN #{start} AND #{end}
+   </select>  -->
+   
+ <select id="eventList" resultType="event">
+      select * from event   
+      where 1=1   
+      order by event_idx DESC  
+      offset  #{offset}  rows  
+      fetch first #{cntPerPage} rows only
+   </select>   
+
+   <select id="EventIngList" resultType="event">
+      <![CDATA[select *  from event  where event_date_end>=SYSDATE and event_date_start<=SYSDATE 
+      order by event_idx DESC  
+      offset   #{offset}  rows  
+      fetch first #{cntPerPage} rows only]]>
+   </select>
+   
+   
+   <select id="EventEndList"  resultType="event">
+      <![CDATA[select *  from   event  where event_date_end<SYSDATE
+      order by event_idx DESC  
+      offset   #{offset}  rows  
+      fetch first #{cntPerPage} rows only]]>
+   </select>
+   
+   <select id="countEndEvent" resultType="Int">
+      <![CDATA[select count(*) count  from   event  where event_date_end<SYSDATE ]]>
+   </select>
+   <select id="countIngEvent" resultType="Int">
+      <![CDATA[select count(*) count  from   event  where event_date_end>=SYSDATE and event_date_start<=SYSDATE]]>
+   </select>
+</mapper>
