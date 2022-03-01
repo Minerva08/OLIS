@@ -24,6 +24,7 @@ public class ChatController {
 	@ResponseBody
 	public List<ChatDTO> chatList(HttpSession session) {
 		MemberDTO dto = (MemberDTO)session.getAttribute("login");
+		System.out.println(dto.getUser_nickname());
 		return cs.selectList(dto.getUser_nickname());
 	}
 	

@@ -76,9 +76,8 @@
                   </div>
                   <div class="detail_category df">
                   	<button id="detail_cate" data-contain="${dto.trade_category}" onclick="detail_cateToGo()">#카테고리 : ${dto.trade_category}</button>
-                  	<c:if test="${login.grade eq 'admin'}">
-                  		<button id="trade_delete" data-idx="${dto.trade_idx }">삭제</button>
-                  	</c:if>
+               		<button id="trade_delete" data-idx="${dto.trade_idx }">삭제</button>
+                  	
                   </div>
                
                </div>
@@ -134,6 +133,7 @@
 </section>
 
 <script>
+const login_grade = '${login.grade}'
 const leftbar = document.querySelector('.left_bar') // 이미지 핸들러 왼쪽바 선택자
 const rightbar = document.querySelector('.right_bar') // 이미지 핸들러 오른쪽 선택자
 const imgSelect = document.querySelectorAll('.trade_img_select') // 이미지 선택자
@@ -142,8 +142,8 @@ const imgframe = document.querySelector('.imgframe') // 이미지 div 선택자
 const imgpage = document.querySelectorAll('.img_paging > p')
 const trade_delete = document.getElementById('trade_delete')
 
-trade_delete.onclick=delete_content
-
+window.addEventListener('load',check_admin)
+	
 
 imgpage.forEach(btn=>{
 	console.log(btn)
@@ -297,8 +297,14 @@ rightbar.onclick=function(){
 
 	
 </script>
+
+
+
+
 <script>
+
 	const chatBtn = document.querySelectorAll('.detail_chatBtn')
+	console.log(chatBtn)
 	const login_nickname = '${login.user_nickname}'
 	writer_name= '${dto.trade_writer}'
 	writer_profile= '${dto.trade_user_profile}'
@@ -308,6 +314,9 @@ rightbar.onclick=function(){
 	})
 	opponent_title.innerText = writer_name
 </script>
+
+
+
 <script>
    const detail_cate = document.getElementById('detail_cate');
    const replyList = document.querySelector('.replyList')

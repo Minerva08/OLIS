@@ -5,27 +5,15 @@
    
 <mapper namespace="com.itbank.model.MemberDAO">
 	<update id="updateInfo" parameterType="member">
-		update member set
-		<if test="user_pw != null">
-			user_pw=#{user_pw} where user_email=#{user_email}
-		</if>
-		
-		<if test="user_nickname != null">
-			user_nickname=#{user_nickname} where user_email=#{user_email}
-		</if>
-		
-		<if test="user_pnum != null">
-			user_pnum=#{user_pnum} where user_email=#{user_email}
-		</if>
-		
-		<if test="member_out != null">
-			member_out=#{member_out} where user_email=#{user_email}
-		</if>
-		
-		<if test="user_profile_img != null">
-			user_profile_img = #{user_profile_img} where user_email = #{user_email}
-		</if>
-		
+		update member
+		<set>
+			<if test="user_pw != null">user_pw=#{user_pw},</if>
+			<if test="user_nickname != null">user_nickname=#{user_nickname},</if>
+			<if test="user_pnum != null">user_pnum=#{user_pnum},</if>
+			<if test="member_out != null">member_out=#{member_out},</if>
+			<if test="user_profile_img != null">user_profile_img = #{user_profile_img},</if>
+		</set>
+		where user_email=#{user_email}
 	</update>
 	
 	<select id="update_session" parameterType="string" resultType="member">

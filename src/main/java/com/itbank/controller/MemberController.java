@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -44,26 +45,27 @@ public class MemberController {
 
     @PostMapping("/member/login")
     public ModelAndView login(MemberDTO dto, HttpSession session) {
+    	System.out.println(dto);
       ModelAndView mav = new ModelAndView("/home");
       String hashed = hash.getHash(dto.getUser_pw());
   	  dto.setUser_pw(hashed);
       MemberDTO login = ms.isMember(dto);
    
       if(login.getGrade().equals("admin")) {
-        mav.addObject("admin", 1);
+       
         session.setAttribute("login", login);
   	  }
 	      
-      	else if(!login.getGrade().equals("admin")){
-      		mav.addObject("admin", 0);
-            session.setAttribute("login", login);
-        }
-	  	else {
-	    	  mav.setViewName("/member/login");
-	    	  mav.addObject("msg", "이메일 또는 비밀번호를 확인해 주세요");
-	    }
-        return mav;
+  	else if(!login.getGrade().equals("admin")){
+  	
+        session.setAttribute("login", login);
     }
+  	else {
+    	  mav.setViewName("/member/login");
+    	  mav.addObject("msg", "이메일 또는 비밀번호를 확인해 주세요");
+    }
+        return mav;
+   }
 
     @PostMapping("/member/join")
     public ModelAndView join(MemberDTO dto) {
@@ -114,10 +116,13 @@ public class MemberController {
         return ms.getEmail(pnum);
     }
     
-    @GetMapping("/changePw/{newPass}/{user_email}/")
+    @PostMapping("/changePw")
     @ResponseBody
-    public int changePw(@PathVariable String newPass, @PathVariable String user_email) {
-       return ms.changePw(newPass,user_email);
+    public int changePw(@RequestBody HashMap<String, Object> map) {
+    	System.out.println("1:"+map.get("newPass"));
+    	System.out.println("2:"+map.get("user_email"));
+    	
+       return ms.changePw(map);
     }
     
     

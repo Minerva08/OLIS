@@ -52,4 +52,14 @@
    <select id="countIngEvent" resultType="Int">
       <![CDATA[select count(*) count  from   event  where event_date_end>=SYSDATE and event_date_start<=SYSDATE]]>
    </select>
+   
+   <insert id="insertEvent" parameterType="event">
+	   	insert into event values(
+		event_seq.nextval,
+		#{event_title},
+		#{event_content},
+		#{event_date_start},
+		#{event_date_end},
+		#{event_img})
+   </insert>
 </mapper>

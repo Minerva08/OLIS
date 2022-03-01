@@ -1,9 +1,7 @@
 package com.itbank.model;
 
 import java.sql.Date;
-
 import org.springframework.web.multipart.MultipartFile;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 //TRADE_IDX	NUMBER
@@ -19,6 +17,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 //TRADE_CATEGORY	VARCHAR2(255 BYTE)
 //TRADE_SOLD_DATE	DATE
 //TRADE_TITLE	VARCHAR2(255 BYTE)
+
 public class TradeDTO {
 	private int trade_idx;
 	private String trade_writer;
@@ -27,6 +26,7 @@ public class TradeDTO {
 	private MultipartFile upload;
 	private MultipartFile upload2;
 	private MultipartFile upload3;
+	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
@@ -39,6 +39,7 @@ public class TradeDTO {
 	private String trade_sold;
 	private String trade_content;
 	private int trade_price;
+	private String trade_price1;
 	private String trade_category;
 	
 	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern ="yyyy-MM-dd")
@@ -50,6 +51,14 @@ public class TradeDTO {
 	private int trade_like_count;
 	
 	
+	
+	
+	public String getTrade_price1() {
+		return trade_price1;
+	}
+	public void setTrade_price1(String trade_price1) {
+		this.trade_price1 = trade_price1;
+	}
 	public int getTrade_like_count() {
 		return trade_like_count;
 	}

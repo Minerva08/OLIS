@@ -61,7 +61,8 @@
 		<if test="trade_user_profile != null">
 			#{trade_user_profile},
 		</if>
-		0
+		0,
+		'N'
 		)
 	</insert>
    

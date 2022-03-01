@@ -1,6 +1,6 @@
 package com.itbank.controller;
 
-import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.List;
 
@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.itbank.model.EventDTO;
 import com.itbank.model.MemberDTO;
 import com.itbank.model.NoticeDTO;
 import com.itbank.model.ProductDTO;
 import com.itbank.model.QnADTO;
 import com.itbank.model.TradeDTO;
+import com.itbank.service.EventService;
 import com.itbank.service.MemberService;
 import com.itbank.service.NoticeService;
 import com.itbank.service.ProductService;
@@ -28,6 +30,7 @@ public class AdminCtroller {
 	@Autowired private QnAService qs;
 	@Autowired private TradeService ts;
 	@Autowired private MemberService ms;
+	@Autowired private EventService es;
 	
 	@GetMapping("/admin/join_admin")
 	public void join_admin() {};
@@ -73,6 +76,16 @@ public class AdminCtroller {
 		ModelAndView mav = new ModelAndView("/admin/insertQnA");
 		int row = qs.insert(dto);
 		mav.addObject("msg", "qna 등록 완료");
+		return mav;
+	};
+	
+	@GetMapping("/admin/insertEvent")
+	public void insert_Event() {};
+	@PostMapping("/admin/insertEvent")
+	public ModelAndView  insert_E(EventDTO dto) throws Exception {
+		ModelAndView mav = new ModelAndView("/admin/insertEvent");
+		int row = es.insert(dto);
+		mav.addObject("msg", "이벤트 등록 완료");
 		return mav;
 	};
 	

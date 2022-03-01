@@ -264,7 +264,9 @@ public class MypageController {
 
 	@PostMapping("/updateInfo")
 	public ModelAndView updateInfo(MemberDTO dto,HttpSession session) throws Exception {
-		System.out.println("1 : "+dto);
+		System.out.println("1 : " + dto.getUser_profile_img());
+		System.out.println("2 : " + dto.getUpload());
+		
 		ModelAndView mav = new ModelAndView("redirect:/myPage/info");
 		int row = ms.updateInfo(dto);
 		MemberDTO memberinfo = ms.Member(dto.getUser_email());

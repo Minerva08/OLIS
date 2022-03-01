@@ -98,7 +98,7 @@
 	shopping_btn.forEach(ev => {
 		ev.addEventListener('click', (event) => {
 			console.log(+event.target.dataset.modelnum)
-			location.href = cpath + '/product/product_detail?param=' + event.target.dataset.modelnum + '&idx=' + (+event.target.dataset.idx)
+			location.href = cpath + '/product/product_detail?modelnum=' + event.target.dataset.modelnum// + '&idx=' + (+event.target.dataset.idx)
 		})
 	})
 	

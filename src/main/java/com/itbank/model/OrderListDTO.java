@@ -27,6 +27,11 @@ public class OrderListDTO {
 	
 	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern ="yyyy-MM-dd")
 	private Date order_Date;
+	@Override
+		public String toString() {
+			// TODO Auto-generated method stub
+			return String.format("%s",order_Date);
+		}
 	
 	public String getOrder_address() {
 		return order_address;

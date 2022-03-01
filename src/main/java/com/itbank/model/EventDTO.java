@@ -1,8 +1,11 @@
 package com.itbank.model;
 
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.sql.Date;
+
+
+
+import org.springframework.web.multipart.MultipartFile;
 
 /*
 EVENT_IDX	NUMBER
@@ -30,7 +33,7 @@ public class EventDTO {
 	private Date event_date_start;
 	private Date event_date_end;
 	private String event_img;
-	
+	private MultipartFile upload;
 	
 	private int nowPage, startPage, endPage, total, cntPerPage, lastPage, start, end;
 	
@@ -43,8 +46,9 @@ public class EventDTO {
 		return String.format("%s %s", event_title,event_content);
 	}
 	public EventDTO() {
-		
+		// TODO Auto-generated constructor stub
 	}
+	
 	public EventDTO(int total, int nowPage, int cntPerPage ) {
 		setNowPage(nowPage);
 		setCntPerPage(cntPerPage);
@@ -69,6 +73,16 @@ public class EventDTO {
 			setStartPage(1);
 		}
 	}
+	
+	
+	public MultipartFile getUpload() {
+		return upload;
+	}
+
+	public void setUpload(MultipartFile upload) {
+		this.upload = upload;
+	}
+
 	private void calcLastPage(int total, int cntPerPage) {
 		//제일 마지막 페이지 계산
 		setLastPage((int) Math.ceil((double)total / (double)cntPerPage));

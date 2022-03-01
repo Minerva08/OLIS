@@ -536,7 +536,7 @@ function onDelete(event) {
 }
 
 function onBuy(event) {
-   location.href = cpath + '/product/product_detail?param=' + event.target.dataset.modelnum
+   location.href = cpath + '/product/product_detail?modelnum=' + event.target.dataset.modelnum
 }
 // =================================================================
 function getArrjson(arr) {
@@ -885,6 +885,7 @@ function resetsearch() {
 function orrander(target, arr) {
 	target.innerHTML = ''
 	arr.forEach(dto => {
+		console.log(dto.order_Date)
 		const price = (dto.order_price).toLocaleString('ko-KR')
 		let dom =	`<li class="saleList_box_li jcsb" data-sold="${dto.order_check }">`
 			dom +=		`<div class="jcce aice">`

@@ -32,6 +32,18 @@ function imgCount(img1,img2){
 	})
 }
 
+
+function check_admin(){
+	console.log(trade_delete)
+	if(login_grade=='admin'){
+		trade_delete.onclick=delete_content
+	}
+	else{
+		trade_delete.classList.add('hidden')
+	}
+}
+
+
 function delete_content(event){
 	let con_num = event.target.dataset.idx
 	location.href=cpath+'/trade?trade_idx='+con_num
@@ -189,6 +201,8 @@ function sortBtnSet(target) {
    target.style.color = '#F15746'
    target.style.fontWeight = 'bold'
 }
+
+//=====================중고거래 가격 설정
 
 function inputNumberFormat(obj) {
 	console.log(obj.nextElementSibling.nextElementSibling)

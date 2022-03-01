@@ -8,6 +8,7 @@ function chatList() {
 	.then(resp => resp.json())
 	.then(json => {
 		chatRender(json)
+		console.log(json)
 		
 	})
 }

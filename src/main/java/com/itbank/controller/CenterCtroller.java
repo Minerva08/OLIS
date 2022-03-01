@@ -27,6 +27,7 @@ public class CenterCtroller {
 
 	@GetMapping("/center/QnA")
 	public ModelAndView qnaList(@RequestParam int page) throws Exception {
+		System.out.println(page);
 		if (page == 0) {
 			page = 1;
 		}
@@ -53,9 +54,7 @@ public class CenterCtroller {
 		boolean pre = section != 0;
 		boolean next = buttons != end;
 		for(int i=0; i<list.size();i++) {
-			System.out.println(list.get(i).getQna_content());
 			list.get(i).setQna_content(qs.getContent(list.get(i).getQna_content()));
-			System.out.println(list.get(i));
 		}
 		mav.addObject("list", list);
 		mav.addObject("total_contents", total_contents);
@@ -70,7 +69,7 @@ public class CenterCtroller {
 	}
 
 	@GetMapping("/center/이용정책")
-	public ModelAndView qna_policy(@RequestParam int page){
+	public ModelAndView qna_policy(@RequestParam int page) throws Exception{
 		if (page == 0) {
 			page = 1;
 		}
@@ -96,6 +95,9 @@ public class CenterCtroller {
 		}
 		boolean pre = section != 0;
 		boolean next = buttons != end;
+		for(int i=0; i<list.size();i++) {
+			list.get(i).setQna_content(qs.getContent(list.get(i).getQna_content()));
+		}
 		mav.addObject("list", list);
 		mav.addObject("total_contents", total_contents);
 		mav.addObject("section", section);
@@ -109,7 +111,7 @@ public class CenterCtroller {
 	}
 
 	@GetMapping("/center/공통")
-	public ModelAndView qna_same(@RequestParam int page) {
+	public ModelAndView qna_same(@RequestParam int page) throws Exception {
 		if (page == 0) {
 			page = 1;
 		}
@@ -135,6 +137,9 @@ public class CenterCtroller {
 		}
 		boolean pre = section != 0;
 		boolean next = buttons != end;
+		for(int i=0; i<list.size();i++) {
+			list.get(i).setQna_content(qs.getContent(list.get(i).getQna_content()));
+		}
 		mav.addObject("list", list);
 		mav.addObject("total_contents", total_contents);
 		mav.addObject("section", section);
@@ -148,7 +153,7 @@ public class CenterCtroller {
 	}
 
 	@GetMapping("/center/판매")
-	public ModelAndView sell_policy(@RequestParam int page){
+	public ModelAndView sell_policy(@RequestParam int page) throws Exception{
 		if (page == 0) {
 			page = 1;
 		}
@@ -174,6 +179,9 @@ public class CenterCtroller {
 		}
 		boolean pre = section != 0;
 		boolean next = buttons != end;
+		for(int i=0; i<list.size();i++) {
+			list.get(i).setQna_content(qs.getContent(list.get(i).getQna_content()));
+		}
 		mav.addObject("list", list);
 		mav.addObject("total_contents", total_contents);
 		mav.addObject("section", section);
@@ -187,7 +195,7 @@ public class CenterCtroller {
 	}
 
 	@GetMapping("/center/구매")
-	public ModelAndView buy_policy(@RequestParam int page){
+	public ModelAndView buy_policy(@RequestParam int page) throws Exception{
 		if (page == 0) {
 			page = 1;
 		}
@@ -215,6 +223,9 @@ public class CenterCtroller {
 		}
 		boolean pre = section != 0;
 		boolean next = buttons != end;
+		for(int i=0; i<list.size();i++) {
+			list.get(i).setQna_content(qs.getContent(list.get(i).getQna_content()));
+		}
 		mav.addObject("list", list);
 		mav.addObject("total_contents", total_contents);
 		mav.addObject("section", section);

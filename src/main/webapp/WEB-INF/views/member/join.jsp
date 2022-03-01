@@ -138,7 +138,7 @@
     
     //회원가입 이메일 인증
 //  const join_emailForm = document.querySelector('.join_emailForm')
- 	 const join_sendMailMsg = document.getElementById('join_sendMailMsg')
+ 	const join_sendMailMsg = document.getElementById('join_sendMailMsg')
 	const join_authForm = document.querySelector('.join_authForm')
 	const join_authMsg = document.getElementById('join_authMsg')
   let second = 300 //인증번호 입력시간

@@ -6,10 +6,11 @@
 <mapper namespace="com.itbank.model.ChatDAO">
 	<select id="selectList" resultType="chat">
 		select DISTINCT * from chat
-		where rowid in (select max(rowid) from chat where
+		where chat_idx in (select max(chat_idx) from chat where
 		opponent_name=#{user_nickname}
 		or
-		self_name=#{user_nickname} group by room_idx) order by chat_idx desc
+		self_name=#{user_nickname} group by room_idx) 
+		<!-- order by chat_idx desc -->
 	</select>
 
 	<select id="selectListAll" resultType="chat"

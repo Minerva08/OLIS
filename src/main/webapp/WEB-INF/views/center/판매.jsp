@@ -40,7 +40,7 @@
 						<p data-idx="${dto.qna_idx}" style="margin-right:30px; font-weight: bold;">${dto.qna_category }</p>
 						<p data-idx="${dto.qna_idx}">${dto.qna_title }</p>
 					</div>
-					<pre class="qna_content hiddenNone">${dto.path}</pre>
+					<pre class="qna_content hiddenNone">${dto.qna_content}</pre>
 			</c:forEach>
 		</div>
 		

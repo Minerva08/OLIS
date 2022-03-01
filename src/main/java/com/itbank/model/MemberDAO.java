@@ -1,5 +1,7 @@
 package com.itbank.model;
 
+import java.util.HashMap;
+
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -24,7 +26,7 @@ public interface MemberDAO {
 	int updateInfo(MemberDTO dto);
 
 	@Update("update member set user_pw=#{newPass} where user_email=#{user_email}")
-	   int changePw(@Param("newPass")String newPass, @Param("user_email")String user_email);
+	int changePw(HashMap<String,Object> map);
 
 	@Update("update member set POINT=#{point} where user_email=#{user_email}")
 	int updatePoint(MemberDTO login);
@@ -33,5 +35,6 @@ public interface MemberDAO {
 	int infoimgDelete(MemberDTO login);
 
 	MemberDTO update_session(String user_email);
+	
 
 }

@@ -35,6 +35,8 @@ public interface EventDAO {
 	@Select("select count(*) count from event where event_title like '%%${search_event}%%'")
 	int searchEventcount(String search_event);
 
+	int insertEvent(EventDTO dto);
+
 
 
 }

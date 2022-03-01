@@ -10,6 +10,8 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.itbank.mail.Hash;
@@ -53,10 +55,10 @@ public class MailController {
 		return ret;
 	}
 	
-	@GetMapping("/getAuthResult/{userNumber}")
-	public HashMap<String, String> getAuthResult(@PathVariable String userNumber, HttpSession session) {
+	@PostMapping("/getAuthResult")
+	public HashMap<String, String> getAuthResult(@RequestBody HashMap<String, Object> map, HttpSession session) {
 		String sessionHash = (String) session.getAttribute("hashNumber");
-		String userHash = hash.getHash(userNumber);
+		String userHash = hash.getHash(map.get("auth").toString());
 		boolean flag = userHash.equals(sessionHash);
 		HashMap<String, String> ret = new HashMap<String, String>();
 		ret.put("status", flag ? "OK" : "Fail");

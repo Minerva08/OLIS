@@ -100,10 +100,28 @@ function radioClick(event) {
 
 function addList(event) {
 	if(event.target == addBtn1) {
-		addHeight1 += 460
-		wrap1.style.height = addHeight1 + 'px'
-		if(addHeight1 == 1900) {
-			addBtn1.style.display = 'none'
+		if(addBtn1.innerText=='더보기'){
+			console.log('p1',addHeight1)
+			addHeight1 += 453
+			console.log('p2',addHeight1)
+			wrap1.style.height = addHeight1 + 'px'
+			
+		}
+		else if(addBtn1.innerText=='접기'){
+			console.log('m1',addHeight1)
+			addHeight1 -= 453
+			console.log('m2',addHeight1)
+			wrap1.style.height = addHeight1 + 'px'
+			if(addHeight1==520){
+				addBtn1.innerText=''
+				addBtn1.innerText='더보기'
+			}
+
+		}
+		if(addHeight1 >= 1900) {
+			console.log(3,addHeight1)
+			addBtn1.innerText=''
+			addBtn1.innerText='접기'
 			return
 		}
 	}
@@ -125,8 +143,8 @@ function addList(event) {
 	}
 }
 function clickDetail(event) { // 상품 리스트에서 클릭시 상품디테일로 이동 함수
-    const param = event.target.dataset.modelnum
-    location.href = cpath + '/product/product_detail?param=' + param + '&idx=0'
+    const modelnum = event.target.dataset.modelnum
+    location.href = cpath + '/product/product_detail?modelnum=' + modelnum
 }
 
 function getDom(json) {
@@ -140,6 +158,7 @@ function getDom(json) {
 		dom += `<div class="item_price">${price}원</div>`
 		dom += `<div>즉시 구매가</div>`
 		dom += `</div>`
+		
 	})	  
 	const itemImg = document.querySelectorAll('.item_img')
 	const itemBrand = document.querySelectorAll('.item_title')

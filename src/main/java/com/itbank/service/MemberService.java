@@ -55,8 +55,7 @@ public class MemberService {
 	}
 
 	public int updateInfo(MemberDTO dto) throws Exception {
-		System.out.println(dto);
-		if(dto.getUser_profile_img()!=null) {
+		if(dto.getUpload()!=null) {
 		
 			String fileName1 = "";
 			File dest1 = null;
@@ -100,27 +99,29 @@ public class MemberService {
 			uploadFilePath += "/profile/" + fileName1;
 	
 			dto.setUser_profile_img(uploadFilePath);
-			System.out.println(dto.getUser_profile_img());
-			return dao.updateInfo(dto);
+			System.out.println("1212 : " + dto.getUser_profile_img());
+//			return dao.updateInfo(dto);
 		}
 		if(dto.getUser_pw()!=null) {
 			String hashed = hash.getHash(dto.getUser_pw());
 			dto.setUser_pw(hashed);
-			return dao.updateInfo(dto);
+//			return dao.updateInfo(dto);
 		}
-		if(dto.getUser_pnum()!=null) {
-			return dao.updateInfo(dto);
-		}
-		if(dto.getMember_out()!=null) {
-			return dao.updateInfo(dto);
-		}
+//		if(dto.getUser_pnum()!=null) {
+//			return dao.updateInfo(dto);
+//		}
+//		if(dto.getMember_out()!=null) {
+//			return dao.updateInfo(dto);
+//		}
 		return dao.updateInfo(dto);
 		
 	}
 
 
-	public int changePw(String newPass, String user_email) {
-	      return dao.changePw(newPass,user_email);
+	public int changePw(HashMap<String, Object> map) {
+		String hashed = hash.getHash(map.get("newPass").toString());
+		map.put("newPass",hashed);
+	      return dao.changePw(map);
 	   }
 
 	public int updatePoint(MemberDTO login) {

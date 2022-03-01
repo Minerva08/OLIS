@@ -54,6 +54,7 @@ public class TradeController {
 	   @GetMapping("/trade")
 	   public ModelAndView trade_delete(@RequestParam int trade_idx) {
 		   ModelAndView mav = new ModelAndView();
+		   System.out.println(trade_idx);
 		   int row = ts.delete(trade_idx);
 		   if(row==1) {
 			   mav.setViewName("redirect:/trade/tradeList");
@@ -64,8 +65,7 @@ public class TradeController {
 	   public ModelAndView trade_detail(TradeDTO dto, HttpSession session) throws Exception {
 	      ModelAndView mav = new ModelAndView("redirect:/trade/tradeList");
 	      MemberDTO mbDTO = (MemberDTO) session.getAttribute("login");
-	      System.out.println(mbDTO);
-	      System.out.println(dto.getTrade_price());
+	      
 	      int row = ts.insert(dto, mbDTO);
 	      if(row == 1) {
 	         System.out.println("추가 성공");

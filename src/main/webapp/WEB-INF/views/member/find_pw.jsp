@@ -20,8 +20,8 @@
 			<div class="component">
 				<input type="email" name="user_email" class="email" id="email"
 					placeholder="예)dorami@dorami.co.kr" required autofocus
-					autocomplete="off"> <input type="submit" id="send_messege"
-					value="인증번호 전송">
+					autocomplete="off"> 
+				<input type="submit" id="send_messege" value="인증번호 전송">
 			</div>
 		</form>
 		<div class="find_pw_sendLoading hiddenNone">
@@ -51,11 +51,13 @@
 			<div class="ffcl">
 				<input id="find_newPassword_input1" type="password"
 					name="find_pw_newPass" placeholder="새비밀번호" maxlength="15"
-					onkeyup="password_checked_join()" autocomplete="off"> <input
+					onkeyup="password_checked_join()" autocomplete="off"> 
+					
+				<input
 					id="find_newPassword_input2" type="password"
 					name="find_pw_newPassCk" placeholder="새비밀번호확인" maxlength="15"
-					onkeyup="password_checked_join()" autocomplete="off"> <input
-					id="find_newPassword_submit" type="submit" value="비밀번호 변경">
+					onkeyup="password_checked_join()" autocomplete="off"> 
+				<input id="find_newPassword_submit" type="submit" value="비밀번호 변경">
 			</div>
 			<div id="find_pw_Msg"></div>
 		</form>
@@ -63,6 +65,46 @@
 </section>
 
 <script>
+
+	const find_newPassword_input1 = document.getElementById('find_newPassword_input1')
+	const find_newPassword_input2 = document.getElementById('find_newPassword_input2')
+	const find_newPassword = document.getElementById('find_newPassword')
+	const find_pw_form=document.querySelector('.find_pw_form')
+	const sendMailMsg = document.getElementById('find_pw_sendMailMsg')
+	const authMailForm = document.getElementById('find_pw_authMailForm')
+	const authMailMsg = document.getElementById('find_pw_authMailMsg')
+	const changePwForm = document.getElementById('find_pw_changePwForm')
+	const changePwMsg = document.getElementById('find_pw_Msg')
+	const find_pw_sendLoading = document.querySelector('.find_pw_sendLoading')
+	const dotSpan=document.getElementById('dotSpan')
+	
+	let pw1flag = false
+		 let pw2flag = false
+	let user_email = ''
+	let second =300 //인증번호 입력 시간
+	let interval =0
+	const component = document.querySelector('.component')
+	
+	find_newPassword_input1.addEventListener('keydown' , password_button_color)
+	find_newPassword_input2.addEventListener('keydown' , password_button_color)
+	document.getElementById('email').addEventListener('keyup', function buttonBlackandWhite() {
+	if (document.getElementById('email').value == '') {
+		document.getElementById('send_messege').style.backgroundColor='#ebebeb'		
+	}
+	else {
+		document.getElementById('send_messege').style.backgroundColor='black'
+	}
+	})
+	document.querySelector('input[name="find_pw_auth"]').addEventListener('keyup', function buttonBlackandWhite() {
+	if (document.querySelector('input[name="find_pw_auth"]').value == '') {
+		document.getElementById('ininin').style.backgroundColor='#ebebeb'		
+	}
+	else {
+		document.getElementById('ininin').style.backgroundColor='black'
+	}
+	})
+	find_pw_form.onsubmit = sendMailHandler
+	authMailForm.onsubmit = authMailHandler
 	  
 	function loading(){	
 		if(dotSpan.innerText=='......'){
@@ -95,23 +137,23 @@
 	   
 	// 이메일이 존재하는지 확인
 	const emailCheckHandler = (email)=> {
-	const url = cpath +'/email_check?user_email='+email.value;
-	const opt={
-	      method:'GET'
-		}
-		fetch(url,opt)
-	   	.then(resp=>resp.json())
-	   	.then(json=>{
-	    console.log(json)
-	      	if(json.color=='blue'){
-	         alert('일치하는 이메일이 없습니다.')   // 일치하는 이메일이 없으면
-	         return                  // 중단
-	      }
-	      find_pw_form.classList.add('hiddenNone')
-	      find_pw_sendLoading.classList.remove('hiddenNone')
-	      setInterval(loading,500)
-	      sendNumber(email)   // 일치하는 이메일이 있으면 진행  
-	   })
+		const url = cpath +'/email_check?user_email='+email.value;
+		const opt={
+		      method:'GET'
+			}
+			fetch(url,opt)
+		   	.then(resp=>resp.json())
+		   	.then(json=>{
+		    console.log(json)
+		      	if(json.color=='blue'){
+		         alert('일치하는 이메일이 없습니다.')   // 일치하는 이메일이 없으면
+		         return                  // 중단
+		      }
+		      find_pw_form.classList.add('hiddenNone')
+		      find_pw_sendLoading.classList.remove('hiddenNone')
+		      setInterval(loading,500)
+		      sendNumber(email)   // 일치하는 이메일이 있으면 진행  
+		   })
 	}
 	   
 	const sendNumber = function(email) {
@@ -149,11 +191,16 @@
 	         return   // 유효시간이 만료되었다면 이후 코드를 진행하지 않는다
 	      }
 	      const auth = event.target.querySelector('input[name="find_pw_auth"]')
-	     
-	      const url = cpath + '/getAuthResult/' + auth.value + '/'
+	    
+	      const ob={auth:auth.value}
+	      const url= cpath+'/getAuthResult'
 	      const opt = {
-	         method: 'GET'
-	      }
+	   			method: 'POST',
+	   			body: JSON.stringify(ob),
+	   			headers: {
+	   				'Content-Type': 'application/json; charset=utf-8'
+	   			}
+	   		}
 	      fetch(url, opt)
 	      .then(resp => resp.json())
 	      .then(json => {
@@ -194,12 +241,22 @@
 	         alert('비밀번호를 다시 확인해주세요')
 	         return
 	      }
-	      const url = cpath +'/changePw/'+newPass.value+'/'+user_email + '/'
-	      console.log(url)
-	      const opt={
-	            method:"GET"
-	      }
-	      console.log(url)
+	      
+	      const ob = {
+	    		  newPass:newPass.value,
+	    		  user_email:user_email
+	      }	// const는 값이 안바뀌는것이 아니고, 대상이 바뀌지 않는 것이다
+
+			
+			// 2) POST 형식에 맞춰서 서버에 전송하기 (POST요청은 body를 가진다)
+			const url = cpath + '/changePw'
+			const opt = {
+				method: 'POST',
+				body: JSON.stringify(ob),
+				headers: {
+					'Content-Type': 'application/json; charset=utf-8'
+				}
+			}
 	      changePwMsg.innerText=''
 	      fetch(url,opt)
 	      .then(resp=>resp.json())
@@ -221,14 +278,13 @@
 	  
 	  
 	  
-	   //마지막 sendMail
-	   function sendMailHandler(event) {
-	     
-	      event.preventDefault()
-	
-	      //email 입력
-	      const email = event.target.querySelector('input[name="user_email"]')
-	       emailCheckHandler(email)
+	   //마지막 인증번호 전송
+	function sendMailHandler(event) {
+	    event.preventDefault()
+	    //email 입력
+		const email = event.target.querySelector('input[name="user_email"]')
+		console.log(email)
+	    emailCheckHandler(email)
 		user_email = email.value
 	   }   
 	  
@@ -278,45 +334,7 @@
 		  }
 	  }
 	  
-	   const find_newPassword_input1 = document.getElementById('find_newPassword_input1')
-		const find_newPassword_input2 = document.getElementById('find_newPassword_input2')
-		const find_newPassword = document.getElementById('find_newPassword')
-		const find_pw_form=document.querySelector('.find_pw_form')
-		const sendMailMsg = document.getElementById('find_pw_sendMailMsg')
-		const authMailForm = document.getElementById('find_pw_authMailForm')
-		const authMailMsg = document.getElementById('find_pw_authMailMsg')
-		const changePwForm = document.getElementById('find_pw_changePwForm')
-		const changePwMsg = document.getElementById('find_pw_Msg')
-		const find_pw_sendLoading = document.querySelector('.find_pw_sendLoading')
-		const dotSpan=document.getElementById('dotSpan')
-
-    	let pw1flag = false
-   		 let pw2flag = false
-		let user_email = ''
-		let second =300 //인증번호 입력 시간
-		let interval =0
-     const component = document.querySelector('.component')
-     
-     find_newPassword_input1.addEventListener('keydown' , password_button_color)
-     find_newPassword_input2.addEventListener('keydown' , password_button_color)
-    document.getElementById('email').addEventListener('keyup', function buttonBlackandWhite() {
-    	if (document.getElementById('email').value == '') {
-    		document.getElementById('send_messege').style.backgroundColor='#ebebeb'		
-    	}
-    	else {
-    		document.getElementById('send_messege').style.backgroundColor='black'
-    	}
-    })
-     document.querySelector('input[name="find_pw_auth"]').addEventListener('keyup', function buttonBlackandWhite() {
-    	if (document.querySelector('input[name="find_pw_auth"]').value == '') {
-    		document.getElementById('ininin').style.backgroundColor='#ebebeb'		
-    	}
-    	else {
-    		document.getElementById('ininin').style.backgroundColor='black'
-    	}
-    })
-    find_pw_form.onsubmit = sendMailHandler
-	  authMailForm.onsubmit = authMailHandler
+	 
 </script>
 
 <%@ include file="../footer.jsp"%>

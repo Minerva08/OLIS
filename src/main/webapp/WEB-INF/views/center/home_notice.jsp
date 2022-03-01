@@ -34,7 +34,7 @@
 		
 		<div id="notice_pageing" class="df notice_pageing">
 			<c:if test="${pre}">
-				<a href="${cpath}/center/home_notice?page=${begin-4}">＜</a>
+				<a href="${cpath}/center/home_notice?page=${begin-1}">＜</a>
 			</c:if>
 			<c:forEach var="i" begin="${begin}" end="${end}" >
 				<a href="${cpath}/center/home_notice?page=${i}">${i}</a>

@@ -69,9 +69,12 @@ function qna_showcontent(event){
 	
 	while(target.nodeName != 'DIV') {
 		target = target.parentNode
+		
 	}
+	console.log('1:nodeName',target.nodeName)
 	
 	const content = target.nextElementSibling
+	console.log(content)
 	if(content.classList.contains('hiddenNone')){
 		content.classList.remove('hiddenNone')
 	}
@@ -83,14 +86,13 @@ function qna_showcontent(event){
 
 
 function getDomFromDTO(dto) {
-	console.log(dto)
+
 	let dom='<div class="filters" style="font-size:16px">'
 	for(key in dto){
 		let value = dto[key]
+		console.log(value)
 		
-		if(key == 'qna_content'){
-			value=''
-		}
+		
 		if(key =='qna_idx'){
 			value=''
 		}
@@ -106,7 +108,7 @@ function getDomFromDTO(dto) {
 			dom+=value
 			dom+='</p></div>'
 		}
-		if(key =='path'){
+		if(key =='qna_content'){
 			dom+='<pre id="filter_contents" class="hiddenNone" style=" border-bottom: 1px solid #ebebeb; padding:25px; background-color:#fafafa; white-space: pre-line; font-size:14px;">'
 			dom+=value
 			dom+='</pre>'
@@ -116,6 +118,11 @@ function getDomFromDTO(dto) {
 	dom+='</div>'
 	
 	return dom
+}
+
+function go_list(){
+	history.go(-1)
+	return 
 }
 
 function go_all(){

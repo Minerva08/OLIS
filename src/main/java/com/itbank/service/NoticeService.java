@@ -31,18 +31,18 @@ public class NoticeService {
 	private ChannelSftp chSftp = null;
 	
 	
-	public String getText(String path) throws IOException {
-		String text  ="";
-		File f = new File(path);
-		if(f.exists()==false) {
-			System.out.println("파일이 없습니다");
-		}
-		Scanner sc =new Scanner(f);
-		while(sc.hasNextLine()) {
-			text += sc.nextLine() + "\n";
-		}
-		return text;
-	}
+//	public String getText(String path) throws IOException {
+//		String text  ="";
+//		File f = new File(path);
+//		if(f.exists()==false) {
+//			System.out.println("파일이 없습니다");
+//		}
+//		Scanner sc =new Scanner(f);
+//		while(sc.hasNextLine()) {
+//			text += sc.nextLine() + "\n";
+//		}
+//		return text;
+//	}
 
 	public NoticeDTO getOne(int idx) {
 		
@@ -102,7 +102,6 @@ public class NoticeService {
 	}
 
 	public String getContent(String notice_content) throws Exception {
-		System.out.println(notice_content);
 		URL url = new URL(notice_content); 
 		
 		HttpURLConnection conn = (HttpURLConnection)url.openConnection();
@@ -121,7 +120,6 @@ public class NoticeService {
 			}
 			sc.close();
 			conn.disconnect();
-			System.out.println(text);
 			return text;
 		}
 		

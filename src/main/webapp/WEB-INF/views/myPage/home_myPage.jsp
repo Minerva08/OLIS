@@ -41,6 +41,7 @@
 						<li><a href="${cpath}/admin/insertProduct">상품추가</a></li>
 						<li><a href="${cpath}/admin/insertNotice">공지사항 등록</a></li>
 						<li><a href="${cpath}/admin/insertQnA">문의사항 등록</a></li>
+						<li><a href="${cpath}/admin/insertEvent">이벤트 등록</a></li>
 						<li><a href="${cpath }/trade/trade?page=1">중고거래 게시글 관리</a></li>
 						<li><a href="${cpath }/admin/join_admin">관리자 추가</a></li>
 					</ul>

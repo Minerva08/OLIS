@@ -125,7 +125,6 @@ public class QnAService {
 
 	public String getContent(String qna_content) throws Exception {
 		
-		System.out.println(qna_content);
 		URL url = new URL(qna_content); 
 		
 		HttpURLConnection conn = (HttpURLConnection)url.openConnection();

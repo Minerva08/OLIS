@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-
+<script src="${cpath }/resources/js/center.js"></script>
 <section class="noticed df">
 
 	<section class="center_left" >
@@ -42,21 +42,18 @@
 	
 </section>
 <script>
-	const con = '${ dto.notice_content }'
+	
 
 	const back = document.getElementById('back')
-	back.onclick=function(){
-		history.go(-1)
-	}
 	window.onload=function(){
 		const detail = document.getElementById('notice_detail')
 		detail.style.color='black'
 		detail.style.fontWeight='bold'
 		
 	}
+	back.onclick=go_list
 	
-
-	console.log(con)
+	
 </script>
 
 

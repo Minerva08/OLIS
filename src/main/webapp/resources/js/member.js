@@ -187,7 +187,7 @@ const joinAvailableEmailChecker = (join_user_email) =>{
          joinSendNumber(join_user_email) //사용가능한 이메일이면 인증메일 보내기.
       }
       else {
-         alert("이메일 형식이 올바르지 않거나 이미 가입된 이메일 입니다");
+         alert("이미 가입된 이메일 입니다");
          return
       }
       
@@ -217,17 +217,24 @@ const joinSendNumber = function(join_user_email){
    })
    join_authForm.classList.remove('hiddenNone')
 }
+
+
 function joinAuthMailHandler(event){
    event.preventDefault()
    if(second <=0){
       alert('유효시간이 지났습니다. 다시 메일을 보내주세요')
       return
    }
-   const join_auth = event.target.querySelector('input[name="join_auth"]');
-   const url = cpath + '/getAuthResult/' + join_auth.value + '/'
-   const opt={
-         method:'GET'
-   }
+   const auth = event.target.querySelector('input[name="join_auth"]');
+   const ob={auth:auth.value}
+   const url= cpath+'/getAuthResult'
+   const opt = {
+			method: 'POST',
+			body: JSON.stringify(ob),
+			headers: {
+				'Content-Type': 'application/json; charset=utf-8'
+			}
+		}
    fetch(url,opt)
    .then(resp=>resp.json())
    .then(json=>{
@@ -239,7 +246,7 @@ function joinAuthMailHandler(event){
         btn1.style.color = 'white'    
         join_authForm.classList.add('hiddenNone')
          join_authMsg.style.color='blue'
-         join_auth.disabled='disabled'
+         auth.disabled='disabled'
             email.readOnly = true;
         emailflag = true
          //인증에 통과했을 경우 진행할 수 있는 다음 버튼을 보여주거나, 기타 처리를 하면 된다.
@@ -247,7 +254,7 @@ function joinAuthMailHandler(event){
          document.querySelector('.join_authTimer').innerHTML=''
       }else{
          join_authMsg.style.color='red';
-         join_auth.select() //인증안되면 다시 input창 select
+         auth.select() //인증안되면 다시 input창 select
             
       }
    })

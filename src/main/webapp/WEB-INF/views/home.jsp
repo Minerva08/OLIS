@@ -99,6 +99,7 @@
 	const wrap2 = document.querySelector('.home > .home_component > #product2')
 	const wrap3 = document.querySelector('.home > .home_component > #product3')
 	
+	let addHeight1 = 520
 	let addHeight2 = 520
 	let addHeight3 = 520
 	 

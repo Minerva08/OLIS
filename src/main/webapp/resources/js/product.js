@@ -428,6 +428,11 @@ function onPro_nextBtn(event) {
 	}
 }
 
+
+
+
+
+
 // ======================product_detail========================
 function checkSelectAll()  {
     
@@ -446,20 +451,23 @@ function checkSelectAll()  {
       selectAll.checked = false;
     }
   
-  }
+ }
   
-  function selectAll(selectAll)  {
+ function selectAll(selectAll)  {
     const checkboxes = document.getElementsByName('product_checkbox');
     
     checkboxes.forEach((checkbox) => {
       checkbox.checked = selectAll.checked
     })
+    product_buyBtn2.style.backgroundColor = 'black'
+    product_buyBtn2.style.color = 'white'
+    product_buyBtn2.addEventListener('click', gobuyBtn2)
   }
   
 function clickDetail(event) { // 상품 리스트에서 클릭시 상품디테일로 이동 함수
     const modelnum = event.target.dataset.modelnum
     console.log(modelnum)
-    location.href = cpath + '/product/product_detail?modelnum=' + modelnum //+ '?idx=0'
+    location.href = cpath + '/product/product_detail?modelnum=' + modelnum 
 }
 
 function imgDTOcount(img1, img2) { // 슬라이드 횟수 여부 파악함수
@@ -966,11 +974,11 @@ function lastBuyproduct() {
             	
             	if (row == 1) {
             		alert(msg)
-            		location.href = cpath + '/product/product_detail?modelnum=' + model_num+'&idx=0'        		
+            		location.href = cpath + '/product/product_detail?modelnum=' + model_num        		
             	}
             	else {
             		alert('결제에 실패 했습니다.')
-            		location.href = cpath + '/product/product_detail?modelnum=' + model_num+'&idx=0'
+            		location.href = cpath + '/product/product_detail?modelnum=' + model_num
             	}
             })
 

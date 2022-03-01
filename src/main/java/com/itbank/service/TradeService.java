@@ -134,6 +134,18 @@ public class TradeService {
 
 		dto.setTrade_writer(mbDTO.getUser_nickname());
 		dto.setTrade_user_profile(mbDTO.getUser_profile_img());
+		
+		System.out.println("가격 :"+dto.getTrade_price1());
+	    String[] arr_p = dto.getTrade_price1().split(",");
+	    int Trade_price=0;
+	      for(int i=0; i<arr_p.length; i++) {
+	    	  System.out.println(arr_p[i]);
+	    	  Trade_price += Integer.parseInt(arr_p[i]);
+	    	  if(i!= arr_p.length-1) {
+	    		  Trade_price*=1000;
+	    	  } 
+	      }
+	      dto.setTrade_price(Trade_price);
 		return dao.insert(dto);
 	}
 
